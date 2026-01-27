@@ -1,0 +1,161 @@
+.success-page {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #213547;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.success-container {
+  max-width: 700px;
+  width: 100%;
+  background: #f9f9f9;
+  border-radius: 20px;
+  padding: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.success-container h1 {
+  text-align: center;
+  color: #646cff;
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.success-message {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.receipt {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.receipt h2 {
+  color: #646cff;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.receipt-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.receipt-section:last-of-type {
+  border-bottom: none;
+}
+
+.receipt-section h3 {
+  color: #213547;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: #213547;
+}
+
+.receipt-row span:first-child {
+  font-weight: 500;
+}
+
+.receipt-row .signature {
+  font-family: monospace;
+  font-size: 0.85rem;
+  word-break: break-all;
+  text-align: right;
+  max-width: 60%;
+  color: #646cff;
+}
+
+.status-processing {
+  color: #646cff;
+  font-weight: bold;
+}
+
+.receipt-total {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.receipt-total .receipt-row {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #646cff;
+}
+
+.success-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+}
+
+.btn-primary {
+  background: #646cff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #535bf2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(100, 108, 255, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #646cff;
+  border: 1px solid #646cff;
+}
+
+.btn-secondary:hover {
+  background: rgba(100, 108, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .success-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}

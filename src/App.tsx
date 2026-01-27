@@ -1,23 +1,19 @@
-import "./App.css";
-import { YatoriCheckout } from "yatori-checkout/react";
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import ProductPage from './pages/ProductPage';
+import CheckoutPage from './pages/CheckoutPage';
+import SuccessPage from './pages/SuccessPage';
+import './App.css';
 
 function App() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleConfirmation = (event: any) => {
-    console.log(event.detail);
-  };
   return (
-    <>
-      <h1 className="absolute top-10">Welcome to the future</h1>
-
-      <div>
-        <YatoriCheckout
-          wallet="G8RtxPyG2pdrAhrNRMgg7Hia8imCofdCYxvyWiNG14hx"
-          amount={0.01}
-          onYatoriConfirmed={handleConfirmation}
-        />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ProductPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/success" element={<SuccessPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
