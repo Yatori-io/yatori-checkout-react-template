@@ -50,7 +50,7 @@ const SuccessPage = () => {
             <h3>Payment Information</h3>
             <div className="receipt-row">
               <span>Amount Paid:</span>
-              <span>${productPrice.toFixed(2)} SOL</span>
+              <span>${productPrice.toFixed(2)} USDC</span>
             </div>
             <div className="receipt-row">
               <span>Transaction Signature:</span>

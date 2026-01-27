@@ -1,6 +1,6 @@
 # React Example - Solana Payment Demo
 
-A complete e-commerce demo showcasing the **YATORI CHECKOUT** component for seamless Solana payments. This demo includes a product page, CHECKOUT flow, and success page with transaction receipt.
+A complete e-commerce demo showcasing the **YATORI CHECKOUT** component for seamless USDC payments on Solana. This demo includes a product page, CHECKOUT flow, and success page with transaction receipt.
 
 ![YATORI CHECKOUT Demo](https://img.shields.io/badge/Solana-Mainnet--beta-blue) ![React](https://img.shields.io/badge/React-19.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)
 
@@ -33,15 +33,9 @@ This demo application demonstrates how to integrate YATORI CHECKOUT into a React
 
 ## 💳 YATORI CHECKOUT Component
 
-YATORI CHECKOUT is a React component that provides a seamless Solana payment experience. It handles wallet connection, transaction signing, and payment processing in a single, easy-to-use component.
+YATORI CHECKOUT is a React component that provides a seamless USDC payment experience on Solana. It works like a QR code mailbox for Solana addresses - users can scan and pay using the YATORI PAY mobile app without needing a browser wallet extension.
 
-### Key Features
-
-- 🔌 **Automatic Wallet Detection**: Supports Phantom, Solflare, and other Solana wallets
-- 💰 **Direct Payment Processing**: Handles transaction creation and signing
-- ✅ **Transaction Confirmation**: Provides transaction signature and status
-- 🎨 **Customizable Styling**: Easy to integrate into any design
-- 🔒 **Secure**: All transactions are signed by the user's wallet
+Paid with **YATORI PAY** mobile app on iOS and Android - [yatori.io/yatori-pay](https://yatori.io/yatori-pay)
 
 ## ✨ Features
 
@@ -59,8 +53,8 @@ YATORI CHECKOUT is a React component that provides a seamless Solana payment exp
 ### Prerequisites
 
 - Node.js 18+ and npm
-- A Solana wallet extension (Phantom, Solflare, etc.)
 - Basic knowledge of React and TypeScript
+- Users pay via the YATORI PAY mobile app (iOS/Android) - no browser wallet extension needed
 
 ### Install Dependencies
 
@@ -90,7 +84,7 @@ Access the application at http://localhost:5173 (or the port Vite assigns)
 | Prop | Type | Required | Description |
 |------|------|----------|-------------|
 | `wallet` | `string` | ✅ | Solana wallet address to receive payments |
-| `amount` | `number` | ✅ | Payment amount in SOL |
+| `amount` | `number` | ✅ | Payment amount in USDC on Solana |
 | `onYatoriConfirmed` | `(event: CustomEvent) => void` | ✅ | Callback fired when payment is confirmed |
 | `onYatoriAnimationComplete` | `(event: CustomEvent) => void` | ❌ | Callback fired when animation completes (use to navigate to success page) |
 | `className` | `string` | ❌ | Optional CSS class for styling |
@@ -254,7 +248,7 @@ Update product prices in:
 - `src/pages/CHECKOUTPage.tsx`
 
 ```typescript
-const productPrice = 0.75; // Price in SOL
+const productPrice = 0.75; // Price in USDC on Solana
 ```
 
 ## 🛠️ Development
@@ -289,7 +283,7 @@ npm run preview
 3. **Test the Flow**
    - Visit http://localhost:5173
    - Click "Proceed to CHECKOUT" or use YATORI button
-   - Connect your Solana wallet
+   - Scan the QR code with YATORI PAY mobile app
    - Complete payment
    - View transaction on success page with Solscan link
 
@@ -314,13 +308,9 @@ Key color variables:
 
 4. **Check Recipient**: Verify the transaction recipient matches your merchant wallet address.
 
-## 📝 Notes
+## 📦 Package
 
-- This is a **demo application** for testing and development purposes
-- Transactions are processed on **Solana mainnet-beta** (real SOL)
-- Make sure you have a **Solana wallet extension** installed (Phantom, Solflare, etc.)
-- Replace the placeholder merchant wallet address with your actual wallet
-- Transaction signatures can be verified on Solscan using the provided link
+For more information about the YATORI CHECKOUT component, visit: [npmjs.com/package/yatori-checkout](https://www.npmjs.com/package/yatori-checkout)
 
 ## 🤝 Contributing
 
