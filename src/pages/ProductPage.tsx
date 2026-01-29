@@ -33,9 +33,10 @@ const ProductPage = () => {
     <div className="product-page">
       <header className="product-header">
         <h1>
-          Vans Store{" "}
+          Vans Store
+          <br />
           <span className="yatori-checkout-subtitle">yatori-checkout demo</span>
-        </h1>{" "}
+        </h1>
         <nav>
           <button
             className="cart-icon-btn"
